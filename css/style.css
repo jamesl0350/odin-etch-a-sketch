@@ -15,15 +15,19 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #f4f4f4;
+  padding: 10px 0px 30px 0px;
 }
 
 .container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   width: 960px; /* Adjust as needed */
-  border: 2px solid black;
+  height: 960px;
   padding: 0px;
+  box-sizing: border-box;
+  flex-basis: auto;
+  outline-color: black;
+  outline-style: solid;
 }
 
 .grid-item {
@@ -31,5 +35,12 @@ body {
   height: 60px;
   border: 1px solid #ccc;
   background-color: white;
+  width: calc(100% / n - 2px); /* Assuming 2px border */
   box-sizing: border-box; /* Ensures that the border is included in the width */
+  flex-basis: auto;
+}
+
+.grid-hover {
+  background-color: #7c7c7c;
+  box-sizing: border-box;
 }
