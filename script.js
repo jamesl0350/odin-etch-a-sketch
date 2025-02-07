@@ -27,17 +27,21 @@ function initialGrid(newGridSize) {
     gridItem.addEventListener('mouseover', () => {
       gridItem.classList.add('grid-hover');
 
-      let opacity  = 0;
-      gridItem.style.opacity = opacity;
+      let currOpacity  = parseFloat(gridItem.style.opacity) || 0;
+      if (currOpacity < 1) {
+        currOpacity += 0.1;
+        gridItem.style.currOpacity = currOpacity;
+      }
+      gridItem.style.opacity= currOpacity;
 
 
       // Smooth Animation
       // let interval = setInterval(() => {
-      //   if (opacity >= 1) {
+      //   if (currOpacity >= 1) {
       //     clearInterval(interval);
       //   } else {
-      //     opacity+= 0.1;
-      //     gridItem.style.opacity = opacity;
+      //     currOpacity+= 0.1;
+      //     gridItem.style.currOpacity = currOpacity;
       //   }
       // }, 30);
     });
