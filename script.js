@@ -26,6 +26,20 @@ function initialGrid(newGridSize) {
 
     gridItem.addEventListener('mouseover', () => {
       gridItem.classList.add('grid-hover');
+
+      let opacity  = 0;
+      gridItem.style.opacity = opacity;
+
+
+      // Smooth Animation
+      // let interval = setInterval(() => {
+      //   if (opacity >= 1) {
+      //     clearInterval(interval);
+      //   } else {
+      //     opacity+= 0.1;
+      //     gridItem.style.opacity = opacity;
+      //   }
+      // }, 30);
     });
 
     gridContainer.appendChild(gridItem);
