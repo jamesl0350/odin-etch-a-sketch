@@ -32,7 +32,6 @@ function initialGrid(newGridSize) {
       }
       gridItem.style.opacity= currOpacity;
 
-
       // Smooth Animation
       // let interval = setInterval(() => {
       //   if (currOpacity >= 1) {
@@ -63,9 +62,3 @@ function gridFromUser() {
   }
   initialGrid(newGridSize);
 }
-
-// document.querySelector('input').addEventListener('keypress', (event) => {
-//
-//   if (event.key === 'Enter'){
-//     apiRequest();
-//   }
