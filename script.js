@@ -17,8 +17,6 @@ function initialGrid(newGridSize) {
   for (let i = 1; i <= newGridSize * newGridSize; i++) {
     const gridItem = document.createElement('div');
     gridItem.classList.add('grid-item');
-    gridItem.innerText = i;
-
 
     gridItem.style.width = `${cellSize}px`;
     gridItem.style.height = `${cellSize}px`;
